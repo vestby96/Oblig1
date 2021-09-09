@@ -5,7 +5,7 @@ public class Oppgave1 {
     public static void main(String[] args){
         int[] array = {20,3,4,6,7,3,2,10,15,0,2};
 
-        // Printing the sorted array.
+        // Skriver ut det siste og høyeste tallet i arrayet
         System.out.println("Highest value in array : " + maks(array));
     }
 
