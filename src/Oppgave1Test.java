@@ -4,16 +4,19 @@ class Oppgave1Test {
 
     @org.junit.jupiter.api.Test
     void maks() {
-        int[] array = {3,4,6,7,3,20,2,10,15,0,2};
+        int[] a = {0,1,2,3,4,5,1,20};
 
         // Kjører maks funksjonen på arrayet
-        int maksimum = Oppgave1.maks(array);
+        // int maksimum = Oppgave1.maks(a);
 
         // Sjekker om funksjonen gir det som jeg vil at den skal gi
-        assertEquals(20, maksimum);
+        // assertEquals(20, maksimum);
 
-        // Test for Corner cases = "Spesialtilfeller"
+        // Kjører ombyttinger funksjonen på array
+        int count = Oppgave1.ombyttinger(a);
 
+        // Sjekker om funksjonen gir det som jeg vil at den skal gi
+        assertEquals(1, count);
 
     }
 }
