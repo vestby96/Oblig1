@@ -29,7 +29,37 @@ public class Oppgave7 {
             }
         }
 
+        return f;
+    }
 
+    public static String flettB(String... s){
+        // "f" samler tegnene og returneres til slutt
+        String f = "";
+
+        // Finner den lengste lengden av stringene
+        int lengsteS = s[0].length();
+        for(int i = 1; i < s.length; i++) {
+            if(s[i].length() > lengsteS) {
+                lengsteS = s[i].length();
+            }
+        }
+
+        // Variabel "i" brukes til å finne et tegn, brukes som charAt(i)
+        int i;
+        for (i = 0; i < lengsteS; i++) {
+            // Variabel "j" brukes til å finne et ord, brukes som s[j]
+            int j;
+            for (j = 0; j < s.length; j++) {
+                // Skjekker om variabelen "i" er innefor parameteret for lengden på hvert ord
+                if (s[j].length() > i){
+                    // Finner et spesifikt tegn
+                    char tegn = s[j].charAt(i);
+                    // Legger til tegnet i f
+                    f += tegn;
+                }
+            }
+
+        }
         return f;
     }
 
